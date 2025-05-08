@@ -1,0 +1,414 @@
+/* Leaser Page Container */
+.leaser-dashboard-container {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+font-family: "Segoe UI", sans-serif;
+background-color: #f6f6f6;
+}
+
+/* Header */
+.leaser-header-container {
+background-color: #000;
+color: #fff;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+}
+
+.leaser-header-logo {
+font-size: 1.8rem;
+font-weight: bold;
+color: white;
+}
+
+.leaser-header-nav {
+display: flex;
+gap: 1rem;
+flex-wrap: wrap;
+}
+
+.leaser-header-link {
+background-color: #fff;
+color: #000;
+border: 1px solid #000;
+padding: 0.4rem 0.8rem;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.3s ease;
+text-decoration: none;
+}
+
+.leaser-header-link:hover {
+background-color: #00bfae;
+color: white;
+border: 1px solid #00bfae;
+}
+
+/* Main Content */
+.leaser-page-container {
+  background-color: #f4f8ff;
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+font-family: "Segoe UI", sans-serif;
+}
+
+.leaser-main-content {
+flex: 1;
+padding: 2rem;
+text-align: center;
+}
+
+/* searchbooking */
+
+.search-filters {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;      /* Align vertically */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;          /* Wrap on smaller screens */
+  }
+  
+  .search-select,
+  .search-date,
+  .search-button {
+    height: 42px;              /* Same height */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  .search-button {
+    background-color: #00bfae;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  
+  .search-button:hover {
+    background-color: #007e7b;
+  }
+  
+
+.leaser-vehicle-card-container {
+display: flex;
+grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+gap: 1.5rem;
+margin-top: 1.5rem;
+padding: 0 1rem;
+}
+
+.vehicle-card {
+background-color: #fff;
+border: 1px solid #ccc;
+border-radius: 12px;
+padding: 1.2rem;
+box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+text-align: left;
+transition: transform 0.2s ease-in-out;
+}
+
+.vehicle-card:hover {
+transform: translateY(-4px);
+}
+
+.vehicle-card h3 {
+margin-bottom: 0.5rem;
+font-size: 1.2rem;
+}
+
+.vehicle-card p {
+margin: 0.3rem 0;
+}
+
+.vehicle-status.available {
+color: green;
+font-weight: bold;
+}
+
+.vehicle-status.not-available {
+color: red;
+font-weight: bold;
+}
+
+.book-button {
+background-color: #00bfae;
+color: white;
+border: none;
+padding: 0.5rem 1rem;
+cursor: pointer;
+font-weight: bold;
+}
+
+.book-button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+.book-button:hover {
+background-color: #007e7b;
+}
+
+/* Footer */
+.leaser-footer {
+background-color: black;
+color: white;
+text-align: center;
+padding: 1rem 0;
+font-size: 0.9rem;
+border-top: 1px solid #ccc;
+position: relative;
+bottom: 0;
+width: 100%;
+margin-top: auto;
+}
+
+
+/*  */
+
+.search-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-select, .search-date {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-button {
+  background-color: #00bfae;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  background-color: #007e7b;
+}
+
+.vehicle-list {
+  margin-top: 20px;
+}
+
+.vehicle-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.vehicle-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.vehicle-card h3 {
+  margin-bottom: 10px;
+}
+
+.vehicle-card p {
+  margin: 5px 0;
+}
+
+.book-button {
+  background-color: #00bfae;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.book-button:disabled {
+  background-color: #ccc;
+}
+
+.vehicle-status {
+  font-weight: bold;
+}
+
+.vehicle-status.available {
+  color: green;
+}
+
+.vehicle-status.not-available {
+  color: red;
+}
+
+.cancel-button {
+  background-color: #ff4e4e;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* profile */
+
+  .leaser-profilemain-content {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 800px; /* Wider container */
+    margin: 40px auto; /* More spacing from top/bottom */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .leaser-profilemain-content h1 {
+    color: #0066cc;
+    margin-bottom: 20px;
+  }
+  
+  .leaser-profilemain-content img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .leaser-profilemain-content input[type="text"],
+  .leaser-profilemain-content input[type="email"],
+  .leaser-profilemain-content input[type="file"] {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+  }
+  
+  .leaser-profilemain-content button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .leaser-profilemain-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* home */
+
+
+  .leaser-welcome {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .leaser-intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #007bff;
+  }
+  
+  .leaser-dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .leaser-card {
+    background-color: #007bff23; 
+    border-radius: 12px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .leaser-card h3 {
+    margin-bottom: 10px;
+    color: #0056b3; 
+  }
+  
+  .leaser-card p {
+    margin-bottom: 15px;
+    color: #007bff;
+  }
+  
+  .leaser-card button {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .leaser-card button:hover {
+    background-color: #0056b3;
+  }
+
+
+  /* manage boook */
+
+  .leaser-booking-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    padding: 20px 0;
+  }
+  
+  .leaser-booking-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 16px;
+    width: 300px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .leaser-booking-card h4 {
+    margin: 0 0 10px;
+    color: #2e7d32;
+  }
+  
+  .leaser-booking-card p {
+    margin: 6px 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .cancel-button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c62828;
+  }
+  
