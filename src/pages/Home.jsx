@@ -45,8 +45,6 @@ const Home = () => {
     <li>Fully responsive and modern user interface</li>
   </ul>
 </main>
-
-
       {/* Footer */}
       <footer className="home-footer">
         &copy; {new Date().getFullYear()} AutoMates. All rights reserved.

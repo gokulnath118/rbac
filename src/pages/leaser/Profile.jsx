@@ -27,7 +27,7 @@ export default function Profile() {
 
   const handleLogout = () => {
     localStorage.removeItem("loggedInUser");
-    window.location.href = "/login";
+    window.location.href = "/";
   };
 
   return (
