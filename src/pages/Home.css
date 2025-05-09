@@ -1,111 +1,153 @@
 /* Home page layout with travel app theme (green, blue, and white) */
 .home-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: "Segoe UI", sans-serif; /* Consistent font family for the app */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif; /* Consistent font family for the app */
+}
+
+/* Header */
+.home-header {
+  background-color: #000; /* Dark header background */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the header */
+}
+
+/* Logo */
+.home-header .logo {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header buttons */
+.home-header .btn {
+  color: black;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white; /* Blue button */
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.home-header .btn:hover {
+  background-color: #007e7b; /* Darker green hover effect for button */
+}
+
+/* Main content area */
+.home-main {
+  flex: 1;
+  padding: 3rem 2rem; /* Increased padding for better spacing */
+  text-align: center;
+  background-color: #f6f6f6; /* Light background similar to login */
+  animation: fadeIn 0.6s ease-in-out;
+  max-width: 1200px; /* Added a max-width for better content flow */
+  margin: 0 auto; /* Centered content */
+}
+
+/* Title in the main section */
+.home-main h1 {
+  font-size: 3rem; /* Increased size for better visibility */
+  color: #1e1e2f; /* Darker text for better contrast */
+  margin-bottom: 1.5rem; /* Spacing below the title */
+  font-weight: 600; /* Slightly bold for a more prominent title */
+}
+
+/* Description text */
+.home-main p {
+  font-size: 1.3rem; /* Increased font size for better readability */
+  color: #555; /* Lighter text for description */
+  margin-top: 1.5rem; /* Added spacing between paragraph and button */
+  line-height: 1.7; /* Increased line height for better readability */
+  max-width: 800px; /* Max width to avoid stretched lines */
+  margin-left: auto;
+  margin-right: auto; /* Centered the text */
+}
+
+/* Button in the main section */
+.home-main .btn {
+  color: white;
+  background-color: #00bfae; /* Green button to match login button */
+  padding: 1rem 2rem; /* Increased padding for the button */
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 2rem;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase; /* Uppercase text for button */
+}
+
+/* Button hover effect */
+.home-main .btn:hover {
+  background-color: #007e7b; /* Darker green hover effect for button */
+}
+
+/* Footer */
+.home-footer {
+  background-color: #000; /* Dark footer background to match header */
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  margin-top: auto;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Header */
-  .home-header {
-    background-color: #000; /* Dark header background */
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the header */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* Logo */
-  .home-header .logo {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  /* Header buttons */
-  .home-header .btn {
-    color: black;
-    text-decoration: none;
-    margin-left: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: white; /* Blue button */
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Button hover effect */
-  .home-header .btn:hover {
-    background-color: #007e7b; /* Darker green hover effect for button */
-  }
-  
-  /* Main content area */
-  .home-main {
-    flex: 1;
-    padding: 2rem;
-    text-align: center;
-    background-color: #f6f6f6; /* Light background similar to login */
-    animation: fadeIn 0.6s ease-in-out;
-  }
-  
-  /* Title in the main section */
-  .home-main h1 {
-    font-size: 2.5rem;
-    color: #1e1e2f; /* Darker text for better contrast */
-    margin-bottom: 1rem;
-  }
-  
-  /* Description text */
-  .home-main p {
-    font-size: 1.2rem;
-    color: #555; /* Lighter text for description */
-    margin-top: 1rem;
-    line-height: 1.5;
-  }
-  
-  /* Button in the main section */
-  .home-main .btn {
-    color: white;
-    background-color: #00bfae; /* Green button to match login button */
-    padding: 0.8rem 1.5rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 2rem;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Button hover effect */
-  .home-main .btn:hover {
-    background-color: #007e7b; /* Darker green hover effect for button */
-  }
-  
-  /* Footer */
-  .home-footer {
-    background-color: #000; /* Dark footer background to match header */
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    margin-top: auto;
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for footer */
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
+}
+
+/* General list styling for <ul> and <ol> */
+ul, ol {
+  padding-left: 20px; /* Indentation for list items */
+  list-style-position: inside; /* Position bullet or number inside the list item */
+}
+
+/* Styling for individual <li> items */
+li {
+  font-size: 1.1rem; /* Set font size */
+  color: #333; /* Darker text for better readability */
+  margin: 0.5rem 0; /* Spacing between items */
+  line-height: 1.6; /* Line height for better readability */
+  padding-left: 10px; /* Adds space between the bullet/number and text */
+  transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Hover effect on <li> */
+li:hover {
+  background-color: #f0f0f0; /* Light gray hover background */
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* For <li> elements with links inside */
+li a {
+  text-decoration: none; /* Remove underline from links */
+  color: #00bfae; /* Color of the link matching the theme */
+  font-weight: 600; /* Bold font for emphasis */
+  transition: color 0.3s ease; /* Smooth transition on color change */
+}
+
+/* Link hover effect */
+li a:hover {
+  color: #007e7b; /* Darker green for link hover effect */
+}
+

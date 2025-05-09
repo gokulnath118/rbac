@@ -42,9 +42,9 @@ text-decoration: none;
 }
 
 .leaser-header-link:hover {
-background-color: #00bfae;
+background-color: #007bff;
 color: white;
-border: 1px solid #00bfae;
+border: 1px solid #007bff;
 }
 
 /* Main Content */
@@ -260,58 +260,7 @@ margin-top: auto;
   margin-top: 10px;
 }
 
-/* profile */
 
-  .leaser-profilemain-content {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 12px;
-    max-width: 800px; /* Wider container */
-    margin: 40px auto; /* More spacing from top/bottom */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .leaser-profilemain-content h1 {
-    color: #0066cc;
-    margin-bottom: 20px;
-  }
-  
-  .leaser-profilemain-content img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 15px;
-  }
-  
-  .leaser-profilemain-content input[type="text"],
-  .leaser-profilemain-content input[type="email"],
-  .leaser-profilemain-content input[type="file"] {
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-  }
-  
-  .leaser-profilemain-content button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  .leaser-profilemain-content button:hover {
-    background-color: #0056b3;
-  }
-  
   /* home */
 
 
@@ -370,45 +319,178 @@ margin-top: auto;
   /* manage boook */
 
   .leaser-booking-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: flex-start;
-    padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: flex-start;
+  padding: 20px 0;
+}
+
+.leaser-booking-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaser-booking-card h4 {
+  margin: 0 0 10px;
+  color: #2e7d32;
+}
+
+.leaser-booking-card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.cancel-button {
+  background-color: #e53935;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-button:hover {
+  background-color: #c62828;
+}
+
+
+/* profile */
+/* Profile */
+.leaser-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #007bff10;
+}
+
+.leaser-profilemain-content {
+  flex-grow: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.leaser-profile-photo {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.leaser-profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.leaser-profile-info {
+  flex: 1 1 300px;
+}
+
+.leaser-profile-info h1 {
+  color: #007bff;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.leaser-profile-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.leaser-profile-info input[type="text"],
+.leaser-profile-info input[type="email"],
+.leaser-profile-info input[type="file"],
+.leaser-profile-info select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.leaser-profile-info button {
+  padding: 10px 18px;
+  margin: 10px 6px 0 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.leaser-profile-info button:first-of-type {
+  background-color: #388e3c;
+  color: white;
+}
+
+.leaser-profile-info button:first-of-type:hover {
+  background-color: #2e7d32;
+}
+
+.leaser-profile-info button:last-of-type {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.leaser-profile-info button:last-of-type:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+  .leaser-profilemain-content {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .leaser-booking-card {
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 16px;
-    width: 300px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  .leaser-profile-photo,
+  .leaser-profile-info {
+    flex: 1 1 100%;
   }
-  
-  .leaser-booking-card h4 {
-    margin: 0 0 10px;
-    color: #2e7d32;
+
+  .leaser-profile-info button {
+    margin: 10px auto;
+    display: block;
   }
-  
-  .leaser-booking-card p {
-    margin: 6px 0;
-    font-size: 14px;
-    color: #333;
-  }
-  
-  .cancel-button {
-    background-color: #e53935;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    margin-top: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-  }
-  
-  .cancel-button:hover {
-    background-color: #c62828;
-  }
-  
+}
+
+/* Gender dropdown */
+.leaser-profilemain-content select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%23000'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.leaser-profilemain-content select:focus {
+  outline: none;
+  border-color: #007bff58;
+  background-color: #fff;
+}

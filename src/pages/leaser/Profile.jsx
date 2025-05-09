@@ -34,25 +34,39 @@ export default function Profile() {
     <div className="leaser-page-container">
       <Header />
       <div className="leaser-profilemain-content">
-        <h1>Leaser Profile</h1>
-        {editing ? (
-          <div>
-            <input name="name" value={user.name} onChange={handleChange} placeholder="Name" />
-            <input name="email" value={user.email} onChange={handleChange} placeholder="Email" />
-            <input name="mobileNo" value={user.mobileNo} onChange={handleChange} placeholder="Email" />
-            <input type="file" name="photo" onChange={handleChange} />
-            <button onClick={handleSave}>Save</button>
-          </div>
-        ) : (
-          <div>
-            <img src={user.photo} alt="Profile" width={100} />
-            <p><strong>Name:</strong> {user.name}</p>
-            <p><strong>Email:</strong> {user.email}</p>
-            <p><strong>Mobile No:</strong> {user.mobileNo}</p>
-            <button onClick={() => setEditing(true)}>Edit</button>
-          </div>
-        )}
-        <button onClick={handleLogout}>Logout</button>
+        <div className="leaser-profile-photo">
+          <img src={user.photo} alt="Profile" />
+        </div>
+
+        <div className="leaser-profile-info">
+          <h1>Leaser Profile</h1>
+
+          {editing ? (
+            <>
+              <input name="name" value={user.name || ""} onChange={handleChange} placeholder="Name" />
+              <input name="email" value={user.email || ""} onChange={handleChange} placeholder="Email" />
+              <input name="mobileNo" value={user.mobileNo || ""} onChange={handleChange} placeholder="Mobile Number" />
+              <select name="gender" value={user.gender || ""} onChange={handleChange}>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+              <input type="file" name="photo" onChange={handleChange} />
+              <button onClick={handleSave}>Save</button>
+            </>
+          ) : (
+            <>
+              <p><strong>Name:</strong> {user.name}</p>
+              <p><strong>Email:</strong> {user.email}</p>
+              <p><strong>Mobile No:</strong> {user.mobileNo}</p>
+              <p><strong>Gender:</strong> {user.gender}</p>
+              <button onClick={() => setEditing(true)}>Edit</button>
+            </>
+          )}
+
+          <button onClick={handleLogout}>Logout</button>
+        </div>
       </div>
       <Footer />
     </div>

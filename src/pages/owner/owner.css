@@ -33,9 +33,9 @@
   }
   
   .owner-header-link:hover {
-    background-color: #00bfae;
+    background-color: #ff9933;
     color: white;
-    border: 1px solid #00bfae;
+    border: 1px solid #ff9933;
   }
 /* Owner Page Container */
 .owner-page-container {
@@ -423,8 +423,8 @@ form {
 }
 
 .home-owner-card {
-  background-color: #ff993331; /* Light green background */
-  border-radius: 12px;
+  background-color: #ff993331; 
+   border-radius: 12px;
   padding: 20px;
   width: 300px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -433,9 +433,8 @@ form {
 
 .home-owner-card h3 {
   margin-bottom: 10px;
-  color: #ff9933; /* Green heading */
+  color: #ff9933;
 }
-
 .home-owner-card p {
   margin-bottom: 15px;
 }
@@ -454,7 +453,7 @@ form {
 }
 
 
-/* booking mana */
+/* booking management */
 
 /* Container for pending bookings */
 .pending-section {
@@ -547,6 +546,139 @@ form {
 }
 
 .processed-header select:focus {
-  border-color: #4CAF50;
+  border-color: #ff9933;
   outline: none;
+}
+
+/* profile */
+.owner-profile-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #ff9c0710;
+}
+
+.owner-profile-main-content {
+  flex-grow: 1;
+  max-width: 800px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.owner-profile-photo {
+  flex: 1 1 250px;
+  text-align: center;
+}
+
+.owner-profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ff9933;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.owner-profile-info {
+  flex: 1 1 300px;
+}
+
+.owner-profile-info h1 {
+  color: #ff9933;
+  margin-bottom: 20px;
+  align-items: center;
+  font-size: 24px;
+}
+
+.owner-profile-info p {
+  margin: 8px 0;
+  font-size: 16px;
+  align-items: left;
+  color: #333;
+}
+
+.owner-profile-info input[type="text"],
+.owner-profile-info input[type="email"],
+.owner-profile-info input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.owner-profile-info button {
+  padding: 10px 18px;
+  margin: 10px 6px 0 0;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.3s ease;
+}
+
+.owner-profile-info button:first-of-type {
+  background-color: #388e3c;
+  color: white;
+}
+
+.owner-profile-info button:first-of-type:hover {
+  background-color: #2e7d32;
+}
+
+.owner-profile-info button:last-of-type {
+  background-color: #d32f2f;
+  color: white;
+}
+
+.owner-profile-info button:last-of-type:hover {
+  background-color: #b71c1c;
+}
+
+@media (max-width: 768px) {
+  .owner-profile-main-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .owner-profile-photo,
+  .owner-profile-info {
+    flex: 1 1 100%;
+  }
+
+  .owner-profile-info button {
+    margin: 10px auto;
+    display: block;
+  }
+}
+/* Gender dropdown */
+.owner-profile-main-content select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D'%23000'%20height%3D'24'%20viewBox%3D'0%200%2024%2024'%20width%3D'24'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M7%2010l5%205%205-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.owner-profile-main-content select:focus {
+  outline: none;
+  border-color: #ffaa0058;
+  background-color: #fff;
 }
